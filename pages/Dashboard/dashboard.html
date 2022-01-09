@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing:border-box;
+            text-align: center;
+        }
+        #top{
+            height: 200px;
+            border:2px solid;
+            background-color: #101820ff;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border: none;
+            color:#f2aa4cff
+            
+        }
+
+        #back-btn{
+            color:black;
+            background-color: #f2aa4cff;
+            height: 40px;
+            width: 15%;
+            border-radius: 20ex;
+            font-weight: 600;
+            border: black;
+            outline:none;
+        }
+
+        #back-btn:hover{
+            background-color: rgb(68, 62, 62);
+        }
+        #back-btn:focus{
+            background-color: rgb(117, 108, 108);
+        }
+
+
+        .toph1{
+            display: flex;
+            justify-content: flex-end;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            position: relative;
+            bottom: 30%;
+            word-spacing: 4px;
+        }
+
+
+        table{
+            margin: 0 auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            width: 90%;
+            margin-top: 2%;
+            
+        }
+
+        tr,td,th{
+           border:2px solid #f2aa4cff;
+           
+           color:#101820ff; 
+           height:40px;
+        }
+
+        .three-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+            
+        }
+
+        .three-btn button{
+            height: 40px;
+            width: 150px;
+            margin-top:2% ;
+            background-color:#101820ff;
+            color: #f2aa4cff;
+            font-weight: 700;
+            margin-left: 5px;
+            border:1px solid #101820ff
+        ;
+        }
+
+        .three-btn button:focus{
+            background-color: rgb(143, 109, 109);
+            color: black;
+        }
+        .three-btn button:hover{background-color: rgb(53, 49, 49);}
+
+        input{
+            width: 50%;
+            height:40px;
+            margin-top: 1%;
+            text-align: left;
+            padding: 10px;
+            
+            border: 1px solid navy;
+            padding: 10px;
+            outline:none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            
+
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+    <div id="top">
+        <button id="back-btn" onclick="goToLogIn()"><i class="fas fa-chevron-double-left"></i>Log Out!</button>
+      <div class="toph1"><h1">
+          Welcome
+          <span id="userC"></span>
+    </h1></div>
+      
+
+    <h1>Welcome to Expense Management System</h1>
+    </div><!---------------top-->
+
+    <h1 style="font-size: 3rem; text-align: center; margin-top: 2%;">All Expenses</h1>
+    <div class="three-btn">   
+        <button onclick="goToAddExpense()">Add Expense!</button>
+        <button onclick="goToAddCategory()">All Categories!</button>
+        <button>Generate report!</button>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Search By Category... " id="">
+    </div>
+
+    <div>
+      <table id="table">
+         <tr > 
+             <th>Id</th>
+             <th>Description</th>
+             <th>Amount</th>
+             <th>Category</th>
+             <th>Created On</th>
+             <th>Actions</th>
+         </tr>  
+            
+          
+      </table>
+
+    </div>
+
+
+</div>
+    <script src="dash.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    font-family: poppins,sans-serif;
+}
+
+#wrapper{
+    display:flex;
+}
+
+#signin{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+#login{
+    text-align: center;
+    width: 60%;
+}
+
+.input{
+    background-color: #ededed;
+    
+    display: grid;
+    grid-template-columns: 5% 85%;    
+    margin-top: 25px;
+    border-radius: 55px;
+    height: 60px;
+}
+
+#username,#pass{
+     
+     
+     border-radius: 55px;
+     margin-left: 1.5rem;
+     padding:0.4rem ;
+     border:none;
+     outline: none;
+     background-color: #ededed;
+     font-weight: 700;
+     font-size: 1.1rem;
+     
+}
+    
+
+input::placeholder{
+    color:#444;
+    font-weight: 600;
+    opacity: 70%;
+}
+
+.input i{
+    line-height: 60px;
+    text-align: center;
+    color: #444;
+    position:relative;
+    left: 10px;
+    opacity: 70%;
+    
+}
+
+#login-btn{
+     width: 150px;
+     
+     margin-top: 5%;
+     height: 50px;
+     border-radius: 50px;
+     font-size: 1.1rem;
+     font-weight: 600;
+     border:none;
+     outline: none;
+     text-transform: uppercase;
+     background-color: rgb(17, 0, 255);
+     color: white;
+     transition: .1s;
+}
+
+#login-btn:hover{
+    background-color: rgb(35, 24, 185);
+}
+#login-btn:focus{
+    background-color:blue;
+}
+
+.social-text{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 3%;
+    word-spacing: 3px;
+}
+
+.social-icon{
+   color:#333;
+   border:1px solid #333;
+   height: 46px;
+   width: 46px;
+   margin:0 0.50rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   border-radius: 100px;
+   text-decoration: none;
+   transition: 0.1s;
+}
+#social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social-icon:hover{
+       background-color:blue ;
+       color: white;
+       text-decoration: none;
+       border:blue;
+       font-weight: 600;
+}
+
+
+
+
+ /* --------------------sec 2----------------------------------------------- */
+
+#signup{
+    min-height: 100vh;
+    width: 45%;
+    overflow: hidden;
+    
+}
+
+#signup-wrapper{
+    height: 100%;
+    background-color:rgb(50, 50, 238);
+    border-bottom-right-radius: 500px;
+    
+}
+
+#top-items{
+      color: white; 
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center;
+      text-align: center;
+      position: relative;
+      top: 2rem;
+      flex-wrap: wrap;
+      text-transform: capitalize;
+}
+
+#top-items button{
+    width: 200px;
+    height: 50px;
+    margin-top: 4%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: none;
+    border:2px solid whitesmoke;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+#top-items button:hover{
+    color:blue;
+    background-color: whitesmoke;
+
+}
+
+#top-items button:focus{
+    color:rgb(66, 66, 149);
+    background-color:rgb(202, 193, 176);
+    border: floralwhite;
+
+}
+
+#top-items h6{
+    word-spacing: 2px;;
+}
+
+#top-items img{
+    width: 350px;
+    position: relative;
+    float: right;
+    left: 40px;
+    top: 90px;
+    transform:rotate(0deg)
+
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#top{
+    background-color:#101820ff;
+    color: #f2aa4cff;
+    height: 200px;
+    text-align: center;
+}
+
+
+
+.form-group{
+    margin:0 auto;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 1%;
+    
+}
+
+.form-group button{
+    margin-top: 1%;
+}
+
+#back-btn{
+    color:black;
+    background-color: #f2aa4cff;
+    height: 40px;
+    width: 15%;
+    border-radius: 20ex;
+    font-weight: 600;
+    border: black;
+    outline:none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 90%;
+}
+
+#toph1{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 20%;
+    font-size:rem;
+}
+
+#toph1 h1{
+font-size: 1.7rem;}
+
+.sech1{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: 30%;
+    flex-wrap: wrap;
+}
+    </style>
+    
+    <script src=''></script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="top">
+            <div id="back-btn" onclick="goToLogIn()"><i class="fas fa-chevron-double-left">Log out!</i></div>
+       <div id="toph1"> <h1>
+            Welcome
+            <span id="userC"></span>
+        </h1></div>
+          
+    
+        <h1 class="sech1">Welcome to Expense Management System</h1>
+        </div><!---------------top-->
+             <h1 style="text-align: center; margin-top: 2%;">Edit Expense!/</h1>
+          <section >
+            <form id="form" onsubmit="addExpense(event)">
+                <div class="form-group w-75" >
+                  <label for="exampleFormControlInput1">Description</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Description">
+                </div>
+                <div class="form-group w-75">
+                    <label for="exampleFormControlInput1">Amount</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput" placeholder="Enter Amount">
+                  </div>
+                <div class="form-group w-75">
+                
+
+                  <label>Categories</label>
+                  <select class="form-control" id="Categories">
+                    
+                      
+                      
+                  </select>
+
+                  <button type="Submit" class="btn btn-primary" onclick="addAlert()">Update</button>
+                </div>
+
+                
+              
+              </form>
+          </section>
+
+    
+    </div>
+    
+</body>
+</html>

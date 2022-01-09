@@ -1,0 +1,142 @@
+<html>
+  <head>
+      <title>ADD CATEGORY</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+       <style>
+           *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+#top{
+    height: 250px;
+    background-color:#102030ff;
+    color: #f2aa4cff;
+}
+
+.add-btn{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top:2%;
+}
+
+
+#form{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#add{
+    width: 80%;
+    padding: 10px;
+    margin-top: 3%;
+}
+
+#btn{
+    margin-top: 2%;
+    width: 10%;
+}
+
+#back-btn{
+    position: relative;
+    top: 10px;
+    left: 20;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid #f2aa4cff;
+    border-radius:50%;
+  
+}
+
+#back-btn:hover{
+    color:black;
+    background-color: #f2aa4cff;
+}
+
+
+.sec{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 8%;
+}
+
+.sec h1{
+    font-size :1.7rem;
+    position: relative;
+    bottom: 20%;
+    right: 5%;
+    text-transform: uppercase;
+}
+
+.sec button{
+    background-color: #f2aa4cff;
+    color:#102030ff;
+    font-weight: 800;
+    padding: 5px;
+    border: #f2aa4cff;
+    width: 100px;
+    font-size: 1rem;
+}
+
+.third{
+    position: relative;
+    top: 40%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+       </style>
+
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+        <div id="top">
+        <div id="back-btn" onclick="goToLogIn()"><i class="fas fa-chevron-double-left"></i></div>
+        <h1>
+            <div class="sec"><h1>
+                Welcome
+                <span id="userC"></span>
+                
+            </h1>
+            <button>Log out!</button>
+          </div>
+    
+        <h1 class="third">  Welcome to Expense Management System</h1>
+        </div><!---------------top------------------>
+        <h1 style="text-align: center; margin-top: 2%;">Add Categories</h1>
+
+
+        <!-- --------------------------------------------BOTTOM ------------------------------------>
+
+        <section id="bottom"></section>
+
+            <form id="form">
+                
+                    <input type="text" placeholder="Add category" id="add" required>
+                    <div>
+                        <input type="submit" id="btn" value="Add" class="btn btn-success" onclick="addCate(event)">
+                    </div>
+                 
+            </form>
+
+        </section>
+
+    </div><!--------------wrapper------->
+     <script src="add.js"></script>
+     
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

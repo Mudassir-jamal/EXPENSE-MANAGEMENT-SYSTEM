@@ -1,0 +1,137 @@
+<html>
+  <head>
+      <title>ADD CATEGORY</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <link rel='stylesheet' type='text/css' href='addcategory.css'>
+
+  </head>
+
+  <body >
+
+    <div id="wrapper">
+        <div id="top">
+        
+            <span id="back-btn" onclick="goToLogIn()"><i class="fas fa-chevron-double-left"></i></span>
+        <div class="sec"><h1>
+            Welcome
+            <span id="userC"></span>
+            
+        </h1>
+        <button>Log out!</button>
+      </div>
+          
+    
+        <h1 class="third">Welcome to Expense Management System</h1>
+        </div><!---------------top------------------>
+        <h1 style="text-align: center; margin-top: 2%;">Add Categories</h1>
+
+
+        <!-- --------------------------------------------BOTTOM ------------------------------------>
+
+        <section id="bottom">
+            <div class="add-btn">
+                <button type="Submit" class="btn btn-danger" onclick="alertFn()">Add Category!</button>
+
+                
+
+            </div>
+
+            <table id="table">
+                
+                    <th>ID</th>
+                    <th>Category Name</th>
+                    <th>Created On</th>
+                
+            </table>
+
+        </section>
+    
+    </div><!--------------wrapper------->
+     <script>
+   //logout
+        let goToLogIn = () =>{
+             alert('Are you surre!')
+             window.location='../../dashboard.html'
+             
+        }
+
+        let alertFn = () => {
+        window.location='subadd/add.html'
+
+         }
+
+         let users = JSON.parse(localStorage.getItem('AddCategory'));
+         console.log(users)
+
+
+         for(i=0; i<users.length; i++){
+            console.log(users[i].input)
+            input = (users[i].input)
+      
+         
+            let date = new Date().toLocaleString()
+         let id = Math.floor(Math.random() * 1000)
+
+         let table = document.getElementById('table')
+        
+        
+        
+        
+                let template = `
+        
+               <tr>
+                <td>${id}</td>
+                  <td>${input}</td>
+                  <td>${date}</td>
+               
+               </tr>
+               
+    
+    `
+    table.innerHTML +=template;
+    //console.log(template)
+            
+    
+            }
+
+            // get localstorage
+        
+        let users2=localStorage.getItem('AllUsers')
+        let user1=JSON.parse(users2)
+   
+        //set username 
+        
+        for(a=0; a<user1.length; a++){
+            console.log(user1[a].username)
+            let name = (user1[a].username.toUpperCase())
+           let topUser =  document.getElementById('userC').innerText=name
+            
+           
+        }
+
+
+        
+        
+        //set username 
+        
+        for(a=0; a<user1.length; a++){
+            console.log(user1[a].username)
+            let name = (user1[a].username.toUpperCase())
+           let topUser =  document.getElementById('userC').innerText=name
+            
+        }
+
+
+       
+         
+     </script>
+
+     
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
